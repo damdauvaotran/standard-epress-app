@@ -5,6 +5,7 @@ import { logger } from '../utils';
 
 // Single model
 import UserModel from './singleModel/user';
+import ClassModel from './singleModel/class';
 
 const db: Sequelize = new Sequelize(
   env.DATABASE_NAME,
@@ -43,11 +44,11 @@ const tableConfig: ModelOptions = {
 
 // Single table
 const User = UserModel(db, tableConfig);
-
-// Many to many table
-// const RolePermission = RolePermissionModel(db, tableConfig);
+const Class = ClassModel(db, tableConfig);
 
 // Relation here
+Class.hasMany(User, { foreignKey: 'classId' });
+User.belongsTo(Class, { foreignKey: 'classId' });
 
 const init = (): void => {
   logger.info('Initializing database');
