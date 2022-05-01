@@ -3,7 +3,7 @@ import { ENodeEnv } from '../enum';
 const NODE_ENV = process.env.NODE_ENV ?? ENodeEnv.dev;
 const PORT = parseInt(process.env.PORT ?? '8000', 10);
 const DATABASE_FORCE_UPDATE = process.env.DATABASE_FORCE_UPDATE === 'true';
-const DATABASE_TIME_ZONE = process.env.DATABASE_TIME_ZONE || 'UTC';
+const DATABASE_TIME_ZONE = process.env.DATABASE_TIME_ZONE || 'local';
 const DATABASE_PORT = parseInt(process.env.DATABASE_PORT ?? '3306', 10);
 const DATABASE_NAME = process.env.DATABASE_NAME ?? '';
 const DATABASE_USERNAME = process.env.DATABASE_USERNAME ?? '';
