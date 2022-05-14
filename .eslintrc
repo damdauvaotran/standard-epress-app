@@ -12,16 +12,12 @@
   "rules": {
     "no-console": 2,
     "prettier/prettier": 1,
-
     "@typescript-eslint/ban-ts-comment": [
       2,
       { "ts-ignore": "allow-with-description" }
     ],
     "@typescript-eslint/no-explicit-any": 0,
-    "@typescript-eslint/no-unused-vars": [
-      2,
-      { "argsIgnorePattern": "^_" }
-    ],
+    "@typescript-eslint/no-unused-vars": [2, { "argsIgnorePattern": "^_" }],
     "@typescript-eslint/ban-types": [
       2,
       {
@@ -35,6 +31,7 @@
       {
         "allowArgumentsExplicitlyTypedAsAny": true
       }
-    ]
+    ],
+    "@typescript-eslint/no-var-requires": 0
   }
 }
