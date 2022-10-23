@@ -1,5 +1,4 @@
 import { buildRes } from './response';
-import { Response } from 'express';
 import EHttpStatusCode from '../enum/httpCode';
 import { createResponse } from 'node-mocks-http';
 
